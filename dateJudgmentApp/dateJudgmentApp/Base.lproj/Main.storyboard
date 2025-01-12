@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date Judgement Result List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DateJudgementResultListViewController" customModule="dateJudgmentApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a3E-3O-FHX">
+                                <rect key="frame" x="0.0" y="222" width="393" height="586"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DtD-eI-g0r">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DtD-eI-g0r" id="vj9-UW-lgX">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="開始日時(6時であれば6と入力)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zfi-na-spE">
+                                <rect key="frame" x="10" y="69" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="終了日時(21時であれば21と入力)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Vp-Yf-kYf">
+                                <rect key="frame" x="10" y="113" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dx-dV-LcD">
+                                <rect key="frame" x="152.66666666666666" y="177" width="88" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="日付判定"/>
+                                <connections>
+                                    <action selector="dateJudgementbButtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuu-Ht-qu5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a3E-3O-FHX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0z5-Z3-xN9"/>
+                            <constraint firstItem="1Dx-dV-LcD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Iv-Dp-aqZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a3E-3O-FHX" secondAttribute="trailing" id="AkU-Sl-Gp7"/>
+                            <constraint firstItem="Zfi-na-spE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="FYZ-Pb-2Bn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a3E-3O-FHX" secondAttribute="bottom" constant="10" id="Haq-Hk-ZUZ"/>
+                            <constraint firstItem="Zfi-na-spE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ozs-iP-HXa"/>
+                            <constraint firstItem="1Dx-dV-LcD" firstAttribute="top" secondItem="4Vp-Yf-kYf" secondAttribute="bottom" constant="30" id="RL4-g5-sy0"/>
+                            <constraint firstItem="4Vp-Yf-kYf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UA2-xS-TuK"/>
+                            <constraint firstItem="Zfi-na-spE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="YmF-h6-HYh"/>
+                            <constraint firstItem="a3E-3O-FHX" firstAttribute="top" secondItem="1Dx-dV-LcD" secondAttribute="bottom" constant="10" id="cF6-W3-qfN"/>
+                            <constraint firstItem="4Vp-Yf-kYf" firstAttribute="top" secondItem="Zfi-na-spE" secondAttribute="bottom" constant="10" id="ebE-EO-smB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Vp-Yf-kYf" secondAttribute="trailing" constant="10" id="kOa-9L-gW5"/>
+                            <constraint firstItem="4Vp-Yf-kYf" firstAttribute="leading" secondItem="Zfi-na-spE" secondAttribute="leading" id="ogJ-BI-7JM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zfi-na-spE" secondAttribute="trailing" constant="10" id="ueX-kP-ktM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="endAtTextFeild" destination="4Vp-Yf-kYf" id="qzS-p0-LCq"/>
+                        <outlet property="startedAtTextFeild" destination="Zfi-na-spE" id="OC8-Xn-KhC"/>
+                        <outlet property="tableView" destination="a3E-3O-FHX" id="qNC-uc-4Dl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
